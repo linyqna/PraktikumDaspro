@@ -14,7 +14,7 @@ public class ifcetakKRS09 {
             System.out.println("UKT payment has been verified");
             System.out.println("KRS now can be printed and you can ask the academic advisior to sign it.");
 
-            System.out.println("Dilarang mempersulit hidup orang.");
+            //System.out.println("Dilarang mempersulit hidup orang.");
             
         }
     }

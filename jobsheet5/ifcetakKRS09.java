@@ -16,5 +16,11 @@ public class ifcetakKRS09 {
         } else {
             System.out.println("Registration rejected. Please pay UKT first.");
         }
+
+        System.out.println("\n=== Using Ternary Operator ===");
+        String result = uktLunas ? 
+            "UKT payment verified\nPlease print KRS and ask for Academic Advisor signature" : 
+            "Registration rejected. Please pay UKT first";
+        System.out.println(result);
     }
 }

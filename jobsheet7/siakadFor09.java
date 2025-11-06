@@ -9,6 +9,7 @@ public class siakadFor09 {
         double grade;
         double highest = 0;
         double lowest = 100;
+        int passed =0, failed = 0;
         
         for (int i = 1; i <= 10; i++) {
             System.out.print("Enter the grade of the  " + i + " student: ");
@@ -20,8 +21,16 @@ public class siakadFor09 {
             if (grade < lowest) {
                 lowest = grade;
             }
+
+            if (grade >= 60) {
+                passed++;
+            } else {
+                failed++;
+            }
         }
         System.out.println("The highest grade: " + highest);
         System.out.println("The lowest grade: " + lowest);
+        System.out.println("Number student passed: " + passed);
+        System.out.println("Number student failed: " + failed);
     }
 }

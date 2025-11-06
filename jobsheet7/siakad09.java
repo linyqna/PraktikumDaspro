@@ -10,9 +10,18 @@ public class siakad09 {
         double highest = 0;
         double lowest = 100;
         
-        for (int i = 0; i <= 10; i++) {
-            System.out.println("Input student's grade: " + i);
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Enter the grade of the  " + i + " student: ");
+            grade = inp.nextDouble();
+
+            if (grade > highest) {
+                highest = grade;   
+            }
+            if (grade < lowest) {
+                lowest = grade;
+            }
         }
-        
+        System.out.println("The highest grade: " + highest);
+        System.out.println("The lowest grade: " + lowest);
     }
 }

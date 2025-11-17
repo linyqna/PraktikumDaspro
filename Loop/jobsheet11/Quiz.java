@@ -19,12 +19,16 @@ public class Quiz {
                 success = (answer == number);
                 
                 if (!success) {
-                    System.out.println("Wrong guess. Try again!");
+                    if (answer < number) {
+                        System.out.println("Too low! Try a higher number.");
+                    } else {
+                        System.out.println("Too high! Try a lower number.");
+                    }
                 } else {
                     System.out.println("Correct! Well done.");
                 }
-
             } while (!success);
+            
             System.out.println("Do you want to repeat the game (Y?N): ");
             menu = inp.next().charAt(0);
             inp.nextLine();

@@ -17,12 +17,14 @@ public class NestedLoop09 {
             System.out.println();
         }
 
-        for (int i = 0; i < temps.length; i++) {
-            System.out.println("City: " + (i + 1));
-            for (int j = 0; j < temps[0].length; j++) {
-                System.out.print(temps[i][j] + " ");
+        int cityNum = 1;
+        for (double[] city : temps) {
+            System.out.print("City " + cityNum + ": ");
+            for (double t : city) {
+                System.out.print(t + " ");
             }
             System.out.println();
+            cityNum++;
         }
     }
 }

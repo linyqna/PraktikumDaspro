@@ -17,14 +17,13 @@ public class NestedLoop09 {
             System.out.println();
         }
 
-        int cityNum = 1;
-        for (double[] city : temps) {
-            System.out.print("City " + cityNum + ": ");
-            for (double t : city) {
-                System.out.print(t + " ");
+        for (int i = 0; i < temps.length; i++) {
+            double sum = 0;
+            for (int j = 0; j < temps[i].length; j++) {
+                sum += temps[i][j];
             }
-            System.out.println();
-            cityNum++;
+            double avg = sum / temps[i].length;
+            System.out.println("Average of City " + (i + 1) + ": " + avg);
         }
     }
 }

@@ -1,4 +1,4 @@
-package Loop.jobsheet11;
+package Loop.Jobsheet11;
 
 import java.util.Scanner;
 import java.util.Random;

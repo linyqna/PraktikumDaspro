@@ -1,4 +1,4 @@
-package Loop.jobsheet07;
+package Loop.Jobsheet07;
 
 import java.util.Scanner;
 

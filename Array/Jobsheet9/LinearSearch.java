@@ -1,17 +1,32 @@
 package Array.Jobsheet9;
 
+import java.util.Scanner;
+
 public class LinearSearch {
     public static void main(String[] args) {
-        int[] arrayInt = {34, 18, 26, 48, 72, 20, 56, 63};
-        int key = 20;
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Enter the number of array elemnts: ");
+        int num = inp.nextInt();
+
+        int[] arrayInt = new int[num];
+        int key;
         int result = 0;
 
         for (int i = 0; i < arrayInt.length; i++) {
+            System.out.print("Enter the array element " + (i + 1) + ": ");
+            arrayInt[i] = inp.nextInt();
+        }
+
+        System.out.print("Enter the key you want to search for: ");
+        key = inp.nextInt();
+
+        for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
-                result = i;
+                result += (i + 1);
                 break;
             }
         }
-        System.out.println("The key in the array is located at index position " + result);
+        System.out.println("The key in array is located at index position " + result);
     }
 }

@@ -9,12 +9,12 @@ public class Value09 {
         int[] finalSc = new int[10];
 
         for (int i = 0; i < 10; i++) {
-            System.out.print("Enter the final score " + i + ": ");
+            System.out.print("Enter the final score " + (i + 1) + ": ");
             finalSc[i] = inp.nextInt();
         }
 
         for (int i = 0; i < 10; i++) {
-            System.out.println("Final score " + i + " is " + finalSc[i]);
+            System.out.println("Final score " + (i + 1) + " is " + finalSc[i]);
         }
     }
 }

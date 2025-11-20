@@ -8,5 +8,9 @@ public class Number09 {
         System.out.println(num[1]);
         System.out.println(num[2]);
         System.out.println(num[3]);
+
+        for (int i = 0; i <= 4; i++) {
+            System.out.println(num[i]);
+        }
     }
 }

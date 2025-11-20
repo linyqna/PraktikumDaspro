@@ -8,7 +8,7 @@ public class Value09 {
 
         int[] finalSc = new int[10];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < finalSc.length; i++) {
             System.out.print("Enter the final score " + (i + 1) + ": ");
             finalSc[i] = inp.nextInt();
         }

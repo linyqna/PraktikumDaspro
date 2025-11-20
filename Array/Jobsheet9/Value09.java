@@ -13,8 +13,12 @@ public class Value09 {
             finalSc[i] = inp.nextInt();
         }
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Final score " + (i + 1) + " is " + finalSc[i]);
+        for (int i = 0; i < finalSc.length; i++) {
+            if (finalSc[i] > 70) {
+                System.out.println("Student " + i + " Passed!");
+            } else {
+                System.out.println("Student " + i + " Failed!");
+            }
         }
     }
 }

@@ -6,25 +6,33 @@ public class AverageScore09 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
-        int[] score = new int[10];
-        double total = 0;
-        double average;
-        int passed = 0;
+        System.out.print("Enter the number of students: ");
+        int student = inp.nextInt();
+
+        int[] score = new int[student];
+        double totalpassed = 0;
+        double totalfailed = 0;
+        double avpassed;
+        double avfailed;
+        int numpassed = 0;
+        int numfailed = 0;
 
         for (int i = 0; i < score.length; i++) {
-            System.out.print("Enter student score " + (i + 1) + ": ");
+            System.out.print("Enter student final score " + (i + 1) + ": ");
             score[i] = inp.nextInt();
+
             if (score[i] > 70) {
-                passed++;
+                numpassed++;
+                totalpassed += score[i];
+            } else {
+                numfailed++;
+                totalfailed += score[i];
             }
         }
 
-        for (int i = 0; i < score.length; i++) {
-            total += score[i];
-        }
-
-        average = total / score.length;
-        System.out.println("The class average score is " + average);
-        System.out.println("The number of student Passed: " + passed);
+        avpassed = totalpassed / numpassed;
+        avfailed = totalfailed / numfailed;
+        System.out.println("The passed student average score " + avpassed);
+        System.out.println("The failed student average score " + avfailed);
     }
 }

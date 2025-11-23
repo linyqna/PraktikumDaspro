@@ -53,8 +53,14 @@ public class CinemaWithScanner09 {
         } else if (menu == 2) {
             System.out.println("\n--Audience List--");
             for (int i = 0; i < audience.length; i++) {
-                System.out.println("Audience in the row " + (i + 1) + (": ") + String.join(", ", audience[i]));
+                for (int j = 0; j < audience[i].length; j++) {
+                    if (audience[i][j] == null) {
+                        audience[i][j] = "***";
+                    }
+                    System.out.println("Audience in the row " + (i + 1) + ": " + String.join(", ", audience[i]));
+                }
             }
+            
         } else if (menu == 3) {
             System.out.println("Exiting program.");
         } else {

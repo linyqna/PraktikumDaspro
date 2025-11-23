@@ -6,7 +6,7 @@ public class CinemaWithScanner09 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
-        String[][] audience = new String[4] [2];
+        String[][] audience = new String[4][2];
         int row, column, menu;
         String name, next;
 
@@ -30,7 +30,19 @@ public class CinemaWithScanner09 {
                 column = inp.nextInt();
                 inp.nextLine();
 
-                audience[row - 1][column - 1] = name;
+                if (row >= 1 && row <= 4 && column >= 1 && column <= 2) {
+                    if (audience[row - 1][column - 1] == null) {
+                        audience[row - 1][column - 1] = name;
+                        System.out.println("Audience data added.");
+                    } else {
+                        System.out.println("Seat [" + row + "][" + column + "] is already taken. Please choose another seat.");
+                        continue;
+                    }
+                } else {
+                    System.out.println("Invalid seat position.");
+                }
+
+
                 System.out.print("Are there any other audiences to be added? (Y/N): ");
                 next = inp.nextLine();
 

@@ -7,25 +7,47 @@ public class CinemaWithScanner09 {
         Scanner inp = new Scanner(System.in);
 
         String[][] audience = new String[4] [2];
-        int row, column;
+        int row, column, menu;
         String name, next;
 
-        while (true) {
-            System.out.print("Enter a name: ");
-            name = inp.nextLine();
-            System.out.print("Enter row number: ");
-            row = inp.nextInt();
-            System.out.print("Enter column number: ");
-            column = inp.nextInt();
-            inp.nextLine();
+        do {
+            System.out.println("\n====Menu Options====");
+        System.out.println("1. Input Audience Data");
+        System.out.println("2. Show Audience List");
+        System.out.println("3. Exit");
+        System.out.print("Enter your choice: ");
+        menu = inp.nextInt();
+        inp.nextLine();
 
-            audience[row - 1][column - 1] = name;
-            System.out.print("Are there any other audiences to be added? (Y/N): ");
-            next = inp.nextLine();
+        if (menu == 1) {
+            System.out.println("\n--Audience Data--");
+            while (true) {
+                System.out.print("\nEnter a name: ");
+                name = inp.nextLine();
+                System.out.print("Enter row number: ");
+                row = inp.nextInt();
+                System.out.print("Enter column number: ");
+                column = inp.nextInt();
+                inp.nextLine();
 
-            if (next.equalsIgnoreCase("N")) {
-                break;
+                audience[row - 1][column - 1] = name;
+                System.out.print("Are there any other audiences to be added? (Y/N): ");
+                next = inp.nextLine();
+
+                if (next.equalsIgnoreCase("N")) {
+                    break;
+                }
+            }    
+        } else if (menu == 2) {
+            System.out.println("\n--Audience List--");
+            for (int i = 0; i < audience.length; i++) {
+                System.out.println("Audience in the row " + (i + 1) + (": ") + String.join(", ", audience[i]));
             }
+        } else if (menu == 3) {
+            System.out.println("Exiting program.");
+        } else {
+            System.out.println("Invalid input!");
         }
+        } while (menu != 3);
     }
 }

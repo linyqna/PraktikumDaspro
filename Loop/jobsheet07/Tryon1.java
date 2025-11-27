@@ -1,4 +1,4 @@
-package Loop.Jobsheet07;
+package loop.Jobsheet07;
 
 public class Tryon1 {
     public static void main(String[] args) {

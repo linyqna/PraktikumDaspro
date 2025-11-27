@@ -6,7 +6,12 @@ public class Siakad09 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
-        int[][] score = new int[4][3];
+        System.out.print("Enter number of student: ");
+        int student = inp.nextInt();
+        System.out.print("Enter the number of courses: ");
+        int course = inp.nextInt();
+
+        int[][] score = new int [student][course];
 
         for (int i = 0; i < score.length; i++) {
             System.out.println("Enter scores for student #" + (i + 1));
@@ -17,7 +22,7 @@ public class Siakad09 {
                 score[i][j] =inp.nextInt();
                 sumEachStudent += score[i][j];
             }
-            System.out.println("Average score: " + sumEachStudent / 3);
+            System.out.println("Average score: " + sumEachStudent / course);
         }
 
         for (int i = 0; i < 3; i++) {
@@ -26,7 +31,7 @@ public class Siakad09 {
             for (int j = 0; j < 4; j++) {
                 sumEachCourse += score[i][j];
             }
-            System.out.println("Course " + (i + 1) + ": " + (sumEachCourse / 4));
+            System.out.println("Course " + (i + 1) + ": " + (sumEachCourse / student));
         }
     }
 }

@@ -61,5 +61,7 @@ public class Quiz2 {
             }
             
         } while (menu != 3);
+        
+        inp.close();
     }
 }

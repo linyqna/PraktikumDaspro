@@ -16,9 +16,9 @@ public class Experiment609 {
         int p, l, t, L, vol;
         System.out.print("Input length = ");
         p = inp.nextInt();
-        System.out.print("Input length = ");
+        System.out.print("Input wide = ");
         l = inp.nextInt();
-        System.out.print("Input length = ");
+        System.out.print("Input high = ");
         t = inp.nextInt();
 
         L = p * l;

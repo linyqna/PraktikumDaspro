@@ -40,7 +40,6 @@ public class Quiz2 {
                 for (int i = 0; i < sales.length; i++) {
                     System.out.println(employee[i][0] + "\t" + sales[i][0] * price + "\t" + sales[i][1] * priceFeb + "\t" + sales[i][2] * price + "\t" + sales[i][3] * price);
                 }
-                inp.nextLine();
             } else if (menu == 2) {
                 System.out.println("\n--Total Sales Per Month--");
                 for (int i = 0; i < month.length; i++) {

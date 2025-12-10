@@ -9,6 +9,9 @@ public class WeeklyGrades {
         {50, 0, 7, 8, 0, 30, 60},
         {15, 10, 16, 15, 10, 10, 5}
     };
+    static void inputGrades(){
+
+    }
     static void displayGrades(){
         for (int i = 0; i < student.length; i++) {
             System.out.print(student[i] + ": ");
@@ -45,6 +48,19 @@ public class WeeklyGrades {
             }
         }
         System.out.println("Student with the highest grade is " + student[index]);
-        System.out.println("The highest score is ");
+        System.out.println("The score ogf the highest is " + highest + "in week " + week);
+        System.out.print("Weekly grade detail: ");
+        for (int i = 0; i < grades[index].length; i++) {
+            System.out.print(grades[index][i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        inputGrades();
+        displayGrades();
+        highestWeek();
+        highestStudent();
+
     }
 }

@@ -83,7 +83,7 @@ public class jobsheet13 {
         }
         type[count] = types;
 
-        System.out.print("Parent's income (max 2000000): ");
+        System.out.print("Parent's income: ");
         double incomes = inp.nextDouble();
         inp.nextLine();
         
@@ -103,7 +103,8 @@ public class jobsheet13 {
             System.out.println("No applicant data yet.");
             return;
         }
-        System.out.printf("%-15s %-10s %-5s %-12s %-10s\n", "Name", "ID", "GPA", "Type", "Income");
+        System.out.printf("%-15s %-10s %-5s %-12s %-10s\n", 
+        "Name", "ID", "GPA", "Type", "Income");
         System.out.println("------------------------------------------------------");
         for (int i = 0; i < count; i++) {
             System.out.printf("%-15s %-10s %-5.2f %-12s %-10.0f\n",
@@ -120,7 +121,8 @@ public class jobsheet13 {
         String search = inp.nextLine();
         boolean found = false;
 
-        System.out.printf("%-15s %-10s %-5s %-12s %-10s\n", "Name", "ID", "GPA", "Type", "Income");
+        System.out.printf("%-15s %-10s %-5s %-12s %-10s\n", 
+        "\nName", "ID", "GPA", "Type", "Income");
         System.out.println("------------------------------------------------------");
         for (int i = 0; i < count; i++) {
             if (type[i].equalsIgnoreCase(search)) {

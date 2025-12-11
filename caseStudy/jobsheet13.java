@@ -3,12 +3,12 @@ package caseStudy;
 import java.util.Scanner;
 
 public class jobsheet13 {
-    static final int MAX = 100;
-    static String[] name = new String[MAX];
-    static String[] id = new String[MAX];
-    static double[] gpa = new double[MAX];
-    static String[] type = new String[MAX];
-    static double[] income = new double[MAX];
+    static final int max = 100;
+    static String[] name = new String[max];
+    static String[] id = new String[max];
+    static double[] gpa = new double[max];
+    static String[] type = new String[max];
+    static double[] income = new double[max];
     static int count = 0;
 
     public static void main(String[] args) {
@@ -56,7 +56,7 @@ public class jobsheet13 {
     }
 
     static void add(Scanner inp){
-        if (count >= MAX) {
+        if (count >= max) {
             System.out.println("Data full!");
             return;
         }
@@ -92,13 +92,12 @@ public class jobsheet13 {
             return;
         } else {
             income[count] = incomes;
+            count++;
+            System.out.println(">> Applicant data has been added.");
         }
-        
-        count++;
-        System.out.println(">> Applicant data has been added.");
     }
     
-    static void display(){
+    static void display(){ 
         System.out.println("\n=== List of All Scholarship Applicant ===");
         if (count == 0) {
             System.out.println("No applicant data yet.");

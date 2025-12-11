@@ -153,9 +153,9 @@ public class jobsheet13 {
 
             if (totalApplicants > 0) {
                 double avg = totalGPA / totalApplicants;
-                System.out.printf("Average GPA for %s: %.2f\n", types, avg);
+                System.out.println("Average GPA for " + types + ": " + avg);
             } else {
-                System.out.printf("No applicants for %s.\n", types);
+                System.out.println("No applicants for " + types);
             }
         }
     }
